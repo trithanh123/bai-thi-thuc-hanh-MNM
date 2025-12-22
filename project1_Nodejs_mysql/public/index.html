@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Thi Cuối Kỳ</title>
+</head>
+<body style="text-align: center; padding-top: 50px;">
+    <h1>Phạm Trí Thành - MSSV:DH52201466  - Lớp:D22_TH02</h1>
+    <h2>Project: Node.js + MySQL + HTML</h2>
+    <p id="server-msg">Đang kết nối server...</p>
+    
+    <script>
+        fetch('/api/info')
+            .then(res => res.json())
+            .then(data => document.getElementById('server-msg').innerText = data.message)
+            .catch(err => document.getElementById('server-msg').innerText = "Lỗi kết nối!");
+    </script>
+</body>
+</html>
