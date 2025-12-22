@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  web-php:
+    build: .
+    ports:
+      - "8080:80" # Chạy ở cổng 8080 để khác cổng 3000 của Project 1
